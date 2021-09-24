@@ -9,9 +9,10 @@ namespace CSharpExercises
     {
         static void Main(string[] args)
         {
-            SquareWithStars();
-            //TriangleWithStarsDownToUp();
-            //TriangleWithStarsUpToDown();
+            EquilateralQuadrangleWithStars();
+           // SquareWithStars();
+           //TriangleWithStarsDownToUp();
+           //TriangleWithStarsUpToDown();
            // FindMinNum();
            // FindMaxNum();
            // GuessNum();
@@ -123,7 +124,40 @@ namespace CSharpExercises
             }
 
         }
-        
+        public static void EquilateralQuadrangleWithStars()
+        {
+            Console.Write("How many stars do you want see?");
+            int stars = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i<=stars; i++)
+            {
+                for (int j = stars; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <=i; k++)
+                {
+                    Console.Write("*"+" ");
+                }
+                Console.WriteLine();
+            }
+            for (int a = 1; a <= stars; a++)
+            {
+                for (int b = 1; b <=a; b++)
+                {
+                    Console.Write(" ");
+                }
+                for (int c = stars; c>a; c--)
+                {
+                    Console.Write("*" + " ");
+                }
+                Console.WriteLine();
+            }
+          
+
+        }
+
+
+
 
 
     }
